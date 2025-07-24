@@ -1,0 +1,76 @@
+/* src/components/CompanyList.css */
+.company-list-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.filters label {
+    font-weight: bold;
+    color: #555;
+}
+
+.filters select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.company-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.company-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-card h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.company-card p {
+    margin-bottom: 5px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.company-card p strong {
+    color: #333;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+}
+
+.error {
+    color: #dc3545;
+}
