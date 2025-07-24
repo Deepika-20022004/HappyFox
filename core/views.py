@@ -61,8 +61,8 @@ class GeneratePreparationPlan(APIView):
             - "week" (string, e.g., "Week 1")
             - "milestone" (string, a one-sentence summary of the week's main goal, e.g., "Mastering Advanced Array Manipulations.")
             - "topic_focus" (string, the primary technical domain for the week, e.g., "Data Structures and Algorithms")
-            - "learning_goals" (a JSON array of strings detailing specific concepts to learn)
-            - "suggested_resources" (a JSON array of strings of the 3 best valid links for the preparation")
+            - "learning_goals" (a string of specific concepts to learn)
+            - "suggested_resources" (a string of the 3 best valid links for the preparation")
 
             Ensure the plan is realistic, logically progressive, and directly tailored to the student's profile.
             """

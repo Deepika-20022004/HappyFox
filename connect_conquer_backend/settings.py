@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'core',          
     'corsheaders',
     'django_filters',
+    'profilebuilder',
 ]
 
 MIDDLEWARE = [
