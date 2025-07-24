@@ -1,6 +1,6 @@
 // src/components/CompanyList.js
 import React, { useState, useEffect } from 'react';
-import './CompanyList.css'; // For simple CSS
+import './css/CompanyList.css'; // For simple CSS
 
 function CompanyList() {
     const [companies, setCompanies] = useState([]);

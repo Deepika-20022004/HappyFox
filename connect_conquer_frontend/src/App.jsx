@@ -33,7 +33,6 @@ function App() {
       </header>
       <main>
         {renderModule()}
-        {/* <CompanyList /> */}
       </main>
     </div>
   );

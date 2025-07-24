@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './MockInterviewSimulator.css'; // For styling
+import './css/MockInterviewSimulator.css'; // For styling
 
 function MockInterviewSimulator() {
     const [companies, setCompanies] = useState([]);

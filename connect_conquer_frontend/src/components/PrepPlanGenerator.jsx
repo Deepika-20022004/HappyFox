@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios'; // Using axios for cleaner API calls
-import './PrepPlanGenerator.css'; // Assuming you have this CSS file
+import './css/PrepPlanGenerator.css'; // Assuming you have this CSS file
 
 // A new component to display each week's plan clearly
 const PlanWeekCard = ({ week, topic_focus, learning_goals, suggested_resources }) => {

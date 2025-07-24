@@ -86,20 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'connect_conquer_db', # Your database name
-    #     'USER': 'your_db_user',       # Your PostgreSQL user
-    #     'PASSWORD': 'your_db_password', # Your PostgreSQL password
-    #     'HOST': 'localhost',          # Or your database host
-    #     'PORT': '5432',               # Default PostgreSQL port
-    # }
 }
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:5173", 
-#     "http://localhost:5173"]
 
 CORS_ALLOW_ALL_ORIGINS = True # For quick hackathon setup, but less secure
 CORS_ALLOW_CREDENTIALS = True # If you implement authentication
