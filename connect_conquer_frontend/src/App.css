@@ -10,7 +10,7 @@ body {
 }
 
 .App-header {
-    background-color: #282c34;
+    background: linear-gradient(180deg,rgb(79, 79, 236),white);
     padding: 15px 0;
     color: white;
     text-align: center;

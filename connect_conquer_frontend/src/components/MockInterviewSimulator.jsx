@@ -45,7 +45,7 @@ function MockInterviewSimulator() {
             const response = await fetch('http://localhost:8000/api/generate_mock_interview/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ company_id: selectedCompanyId, role: selectedRole, num_questions: 5 }),
+                body: JSON.stringify({ company_id: selectedCompanyId, role: selectedRole, num_questions: 10 }),
             });
 
             if (!response.ok) {
@@ -87,7 +87,7 @@ function MockInterviewSimulator() {
     const currentQuestion = mockQuestions[currentQuestionIndex];
     const selectedCompany = companies.find(c => c.id === parseInt(selectedCompanyId));
 
-    if (loading && !interviewStarted) return <div className="loading">Loading companies...</div>;
+    if (loading && !interviewStarted) return <div className="loading">Loading questions...</div>;
     if (error) return <div className="error">Error: {error}</div>;
 
     return (
