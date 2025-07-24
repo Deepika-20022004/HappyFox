@@ -122,7 +122,7 @@ function MockInterviewSimulator() {
                         />
                     </div>
                     <button onClick={handleStartInterview} disabled={loading}>
-                        {loading ? 'Starting...' : 'Start Mock Interview'}
+                        {loading ? 'Starting...' : 'Generate Mock Interview Questions'}
                     </button>
                 </div>
             )}

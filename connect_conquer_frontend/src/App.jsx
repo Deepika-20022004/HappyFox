@@ -24,12 +24,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Connect & Conquer</h1>
         <nav>
           <button onClick={() => setActiveModule('companies')}>Company Drives</button>
           <button onClick={() => setActiveModule('prep_plan')}>Preparation Plan</button>
           <button onClick={() => setActiveModule('mock_interviews')}>Mock Interviews</button>
         </nav>
-        <h1>Connect & Conquer</h1>
       </header>
       <main>
         {renderModule()}
