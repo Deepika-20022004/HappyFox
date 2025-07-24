@@ -1,96 +1,116 @@
-/* src/App.css */
-
-/* Define a modern color palette */
 :root {
-  --main-bg: #c2defa;          /* Light gray for the main background */
-  --sidebar-bg: #282c34;       /* Dark background for the sidebar */
-  --sidebar-text: #ffffff;     /* White text in the sidebar */
-  --accent-color: #61dafb;     /* Your project's original accent color */
-  --hover-bg: #3a4049;         /* Slightly lighter dark for hover states */
-  --active-bg: #000000;        /* Black for the active button */
-  --border-color: #dee2e6;     /* Light border color */
+  --primary-bg: #baddff;       /* Very light gray for the main background */
+  --sidebar-bg: #1a1d24;       /* A deeper, sleeker dark background */
+  --sidebar-text: #e0e0e0;     /* Off-white for better readability on dark bg */
+  --sidebar-text-hover: #ffffff;
+  --accent-color: #00c6ff;     /* A vibrant, modern blue */
+  --hover-bg: #2a2f3a;         /* A subtle, lighter dark for hover states */
+  --border-color: #343a46;     /* A border color that complements the dark bg */
 }
 
-/* Apply a modern font and layout to the entire app */
 .App {
   display: flex;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* --- Sidebar Styling --- */
+/* --- Refined Sidebar Styling --- */
 .sidebar {
   width: 260px;
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text);
   display: flex;
   flex-direction: column;
-  flex-shrink: 0; /* Prevents sidebar from shrinking */
+  flex-shrink: 0;
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebar-header {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   text-align: center;
-  border-bottom: 1px solid var(--hover-bg);
 }
 
 .sidebar-header h1 {
   position: fixed;
   margin: 0;
-  font-size: 1.5rem;
-  color: var(--accent-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--sidebar-text-hover);
+  background: linear-gradient(90deg, var(--accent-color), #A076F9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sidebar-nav {
-  margin: 50px 20px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   position: fixed;
+  top: 20%;
+  flex-grow: 1; /* Pushes the footer down */
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
 }
 
-.sidebar-nav button {
+.sidebar-nav a { /* Targeting the <Link> component */
   background: none;
   border: none;
   color: var(--sidebar-text);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
+  margin: 0.25rem 1rem;
   text-align: left;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between icon and text */
+  gap: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+  border-left: 4px solid transparent; /* Placeholder for active border */
 }
 
-.sidebar-nav button:hover {
+.sidebar-nav a:hover {
   background-color: var(--hover-bg);
+  color: var(--sidebar-text-hover);
 }
 
-/* Style for the currently active button */
-.sidebar-nav button.active {
-  background-color: var(--accent-color);
-  color: var(--sidebar-bg);
-  font-weight: bold;
+/* Style for the currently active link */
+.sidebar-nav a.active {
+  background-color: var(--hover-bg);
+  color: var(--sidebar-text-hover);
+  font-weight: 600;
+  border-left: 4px solid var(--accent-color);
 }
 
-/* Ensures icons look good */
-.sidebar-nav button svg {
-  font-size: 1.2rem;
+.sidebar-nav a svg {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+.sidebar-nav a.active svg {
+  opacity: 1;
+}
+
+/* Sidebar Footer to hold the login/logout status */
+.sidebar-footer {
+  position: fixed;
+  bottom: 1%;
+  padding: 1rem;
+  /* border-top: 1px solid var(--border-color); */
 }
 
 
 /* --- Main Content Area --- */
 .main-content {
-  flex-grow: 1; /* Allows this area to take up remaining space */
-  background-color: var(--main-bg);
-  padding: 1rem; /* Add some padding to prevent content from touching the edges */
-  overflow-y: auto; /* Allows scrolling if content overflows */
+  flex-grow: 1;
+  padding: 0;
+  overflow-y: auto;
+  background-color: var(--primary-bg);
 }
 
-/* We need to adjust the module containers to have a max-width and be centered */
+/* Add a wrapper inside the main content for consistent padding */
 .main-content > div {
-  max-width: 1100px;
-  margin: 0 auto; /* This centers the content within the main area */
-  padding: 1rem; /* Inner padding for the actual content */
+  padding: 2rem;
 }

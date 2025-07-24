@@ -12,7 +12,17 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.parsers import MultiPartParser, FormParser
 
-# (This is the full "Code 2" from the prompt)
+from django.contrib.auth.models import User
+from rest_framework import generics, permissions
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import UserSerializer
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = UserSerializer
+
 class ResumeCheckerView(APIView):
     parser_classes = (MultiPartParser, FormParser)
 
